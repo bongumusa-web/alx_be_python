@@ -1,7 +1,8 @@
 # Get user inputs
 Task = input("Enter your task: ").lower().strip()
-Priority = input("Priority (high/medium/low): ").lower().strip()
 Time_Bound = input("Is this time-bound? (yes/no): ").lower().strip()
+Priority = input("Priority (high/medium/low): ").lower().strip()
+
 
 # Input validation
 if Priority not in ["high", "medium", "low"] or Time_Bound not in ["yes", "no"]:
