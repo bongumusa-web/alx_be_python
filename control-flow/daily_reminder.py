@@ -1,27 +1,27 @@
 # Get user inputs
-Task = input("Enter your task: ").strip()
+Task = input("Enter your task: ").lower().strip()
 Priority = input("Priority (high/medium/low): ").lower().strip()
-Time_bound = input("Is this time-bound? (yes/no): ").lower().strip()
+Time_Bound = input("Is this time-bound? (yes/no): ").lower().strip()
 
 # Input validation
-if Priority not in ["high", "medium", "low"] or Time_bound not in ["yes", "no"]:
+if Priority not in ["high", "medium", "low"] or Time_Bound not in ["yes", "no"]:
     print("Invalid input. Please enter a valid priority (high/medium/low) and time-bound status (yes/no).")
 else:
     match Priority:
         case "high":
-            if Time_bound == "yes":
+            if Time_Bound == "yes":
                 print(f"Reminder: '{Task}' is a high priority task that requires immediate attention today!")
             else:
                 print(f"Reminder: '{Task}' is a high priority task that should be completed as soon as possible after finishing time-bound tasks.")
         
         case "medium":
-            if Time_bound == "yes":
+            if Time_Bound == "yes":
                 print(f"Reminder: '{Task}' is a medium priority task that should be completed today after finishing high priority tasks.")
             else:
                 print(f"Reminder: '{Task}' is a medium priority task that should be completed after high priority and time-sensitive tasks.")
         
         case "low":
-            if Time_bound == "yes":
+            if Time_Bound == "yes":
                 print(f"Reminder: '{Task}' is a low priority task. Consider completing it after medium priority tasks.")
             else:
                 print(f"Note: '{Task}' is a low priority task. Consider completing it when you have free time.")
