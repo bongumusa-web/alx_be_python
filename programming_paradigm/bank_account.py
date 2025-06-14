@@ -12,7 +12,6 @@ class BankAccount:
             print(f"Withdrew: ${amount}")  # ✅ Fix spelling
             return True
         else:
-            print("Insufficient funds.")
             return False
 
     def display_balance(self):
