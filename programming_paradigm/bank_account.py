@@ -4,7 +4,6 @@ class BankAccount:
 
     def deposit(self, amount):
         self.account_balance += amount
-        print(f"Deposited: ${amount}")
         return True
 
     def withdraw(self, amount):
