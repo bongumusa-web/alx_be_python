@@ -26,16 +26,16 @@ class PrintBook(Book):
 
 class Library:
     def __init__(self):
-        self.book = []
+        self.books = []
 
 
 
     def add_book(self, book):
-        self.book.append(book)
-        return self.book
+        self.books.append(book)
+        return self.books
 
     def list_books(self):
-        for book in self.book:
+        for book in self.books:
             if isinstance(book, EBook):
                 print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}KB")
             elif isinstance(book, PrintBook):
